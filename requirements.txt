@@ -1,0 +1,12 @@
+funasr
+numpy==2.3.5
+torch
+torchaudio
+opencc
+huggingface_hub
+git+https://github.com/huggingface/transformers
+nagisa==0.2.11
+kaldi_native_fbank
+cn2an
+textgrid
+matplotlib

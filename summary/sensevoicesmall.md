@@ -7,12 +7,12 @@
 - Macro CER (with punctuation): 0.191163
 - Macro CER (without punctuation): 0.129152
 - Total audio duration (s): 30831.959
-- Total runtime (s): 157.419
-- Total ASR runtime only (s): 57.129
-- Average runtime per file (s): 7.871
+- Total runtime (s): 156.283
+- Total ASR runtime only (s): 56.854
+- Average runtime per file (s): 7.814
 - Average audio duration per file (s): 1541.598
-- End-to-end RTF (batch): 0.005106
-- ASR-only RTF (batch): 0.001853
+- End-to-end RTF (batch): 0.005069
+- ASR-only RTF (batch): 0.001844
 
 ## Error Totals (No Punctuation)
 - Substitutions: 11294
@@ -23,26 +23,26 @@
 
 | File | CER | CER (No Punc) | Runtime (s) | ASR Runtime (s) | RTF | ASR RTF | Analysis Report |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| `ldg001.opus` | 0.200999 | 0.138425 | 7.190 | 2.929 | 0.005129 | 0.002089 | `ldg001.sensevoice.analysis.md` |
-| `ldg002.opus` | 0.194407 | 0.141037 | 6.767 | 2.648 | 0.004811 | 0.001882 | `ldg002.sensevoice.analysis.md` |
-| `ldg003.opus` | 0.210707 | 0.156323 | 6.855 | 2.683 | 0.004867 | 0.001905 | `ldg003.sensevoice.analysis.md` |
-| `ldg004.opus` | 0.191412 | 0.127288 | 6.834 | 2.674 | 0.004867 | 0.001905 | `ldg004.sensevoice.analysis.md` |
-| `ldg005.opus` | 0.209837 | 0.151588 | 6.919 | 2.705 | 0.004882 | 0.001909 | `ldg005.sensevoice.analysis.md` |
-| `mzd001.opus` | 0.129250 | 0.071076 | 6.406 | 2.399 | 0.005183 | 0.001941 | `mzd001.sensevoice.analysis.md` |
-| `mzd002.opus` | 0.145817 | 0.086406 | 6.011 | 2.154 | 0.004967 | 0.001780 | `mzd002.sensevoice.analysis.md` |
-| `mzd003.opus` | 0.143881 | 0.087983 | 6.001 | 2.136 | 0.005005 | 0.001781 | `mzd003.sensevoice.analysis.md` |
-| `mzd004.opus` | 0.152220 | 0.100769 | 6.394 | 2.342 | 0.005254 | 0.001925 | `mzd004.sensevoice.analysis.md` |
-| `mzd005.opus` | 0.135252 | 0.080929 | 6.283 | 2.247 | 0.005079 | 0.001816 | `mzd005.sensevoice.analysis.md` |
-| `sgjj001.opus` | 0.199498 | 0.130295 | 9.601 | 3.211 | 0.005190 | 0.001735 | `sgjj001.sensevoice.analysis.md` |
-| `sgjj002.opus` | 0.193239 | 0.135972 | 9.002 | 2.983 | 0.005100 | 0.001690 | `sgjj002.sensevoice.analysis.md` |
-| `sgjj003.opus` | 0.204257 | 0.138586 | 9.470 | 3.410 | 0.005396 | 0.001943 | `sgjj003.sensevoice.analysis.md` |
-| `sgjj004.opus` | 0.204442 | 0.142195 | 9.445 | 3.159 | 0.005306 | 0.001775 | `sgjj004.sensevoice.analysis.md` |
-| `sgjj005.opus` | 0.203412 | 0.133598 | 9.323 | 3.413 | 0.005238 | 0.001917 | `sgjj005.sensevoice.analysis.md` |
-| `swz001.opus` | 0.210827 | 0.137291 | 8.431 | 2.903 | 0.004982 | 0.001716 | `swz001.sensevoice.analysis.md` |
-| `swz002.opus` | 0.218584 | 0.153483 | 9.083 | 3.229 | 0.005130 | 0.001824 | `swz002.sensevoice.analysis.md` |
-| `swz003.opus` | 0.212192 | 0.144497 | 8.962 | 3.196 | 0.005128 | 0.001829 | `swz003.sensevoice.analysis.md` |
-| `swz004.opus` | 0.231967 | 0.164327 | 9.397 | 3.474 | 0.005216 | 0.001928 | `swz004.sensevoice.analysis.md` |
-| `swz005.opus` | 0.231057 | 0.160964 | 9.046 | 3.234 | 0.005159 | 0.001844 | `swz005.sensevoice.analysis.md` |
+| `ldg001.opus` | 0.200999 | 0.138425 | 7.334 | 2.975 | 0.005232 | 0.002122 | `ldg001.sensevoice.analysis.md` |
+| `ldg002.opus` | 0.194407 | 0.141037 | 6.773 | 2.670 | 0.004816 | 0.001898 | `ldg002.sensevoice.analysis.md` |
+| `ldg003.opus` | 0.210707 | 0.156323 | 6.780 | 2.656 | 0.004814 | 0.001886 | `ldg003.sensevoice.analysis.md` |
+| `ldg004.opus` | 0.191412 | 0.127288 | 6.760 | 2.661 | 0.004815 | 0.001895 | `ldg004.sensevoice.analysis.md` |
+| `ldg005.opus` | 0.209837 | 0.151588 | 6.817 | 2.670 | 0.004810 | 0.001884 | `ldg005.sensevoice.analysis.md` |
+| `mzd001.opus` | 0.129250 | 0.071076 | 6.369 | 2.386 | 0.005153 | 0.001931 | `mzd001.sensevoice.analysis.md` |
+| `mzd002.opus` | 0.145817 | 0.086406 | 5.966 | 2.148 | 0.004930 | 0.001775 | `mzd002.sensevoice.analysis.md` |
+| `mzd003.opus` | 0.143881 | 0.087983 | 5.980 | 2.132 | 0.004988 | 0.001778 | `mzd003.sensevoice.analysis.md` |
+| `mzd004.opus` | 0.152220 | 0.100769 | 6.258 | 2.310 | 0.005142 | 0.001898 | `mzd004.sensevoice.analysis.md` |
+| `mzd005.opus` | 0.135252 | 0.080929 | 6.288 | 2.240 | 0.005083 | 0.001811 | `mzd005.sensevoice.analysis.md` |
+| `sgjj001.opus` | 0.199498 | 0.130295 | 9.492 | 3.200 | 0.005131 | 0.001730 | `sgjj001.sensevoice.analysis.md` |
+| `sgjj002.opus` | 0.193239 | 0.135972 | 8.941 | 2.976 | 0.005065 | 0.001686 | `sgjj002.sensevoice.analysis.md` |
+| `sgjj003.opus` | 0.204257 | 0.138586 | 9.444 | 3.382 | 0.005381 | 0.001927 | `sgjj003.sensevoice.analysis.md` |
+| `sgjj004.opus` | 0.204442 | 0.142195 | 9.367 | 3.152 | 0.005262 | 0.001771 | `sgjj004.sensevoice.analysis.md` |
+| `sgjj005.opus` | 0.203412 | 0.133598 | 9.308 | 3.413 | 0.005229 | 0.001917 | `sgjj005.sensevoice.analysis.md` |
+| `swz001.opus` | 0.210827 | 0.137291 | 8.310 | 2.857 | 0.004910 | 0.001688 | `swz001.sensevoice.analysis.md` |
+| `swz002.opus` | 0.218584 | 0.153483 | 8.976 | 3.208 | 0.005070 | 0.001812 | `swz002.sensevoice.analysis.md` |
+| `swz003.opus` | 0.212192 | 0.144497 | 8.789 | 3.137 | 0.005029 | 0.001795 | `swz003.sensevoice.analysis.md` |
+| `swz004.opus` | 0.231967 | 0.164327 | 9.400 | 3.481 | 0.005218 | 0.001932 | `swz004.sensevoice.analysis.md` |
+| `swz005.opus` | 0.231057 | 0.160964 | 8.932 | 3.198 | 0.005095 | 0.001824 | `swz005.sensevoice.analysis.md` |
 
 ## Top Substitution Patterns (All Files)
 

@@ -7,12 +7,12 @@
 - Macro CER (with punctuation): 0.168179
 - Macro CER (without punctuation): 0.122061
 - Total audio duration (s): 30831.959
-- Total runtime (s): 188.647
-- Total ASR runtime only (s): 88.558
-- Average runtime per file (s): 9.432
+- Total runtime (s): 191.023
+- Total ASR runtime only (s): 89.848
+- Average runtime per file (s): 9.551
 - Average audio duration per file (s): 1541.598
-- End-to-end RTF (batch): 0.006119
-- ASR-only RTF (batch): 0.002872
+- End-to-end RTF (batch): 0.006196
+- ASR-only RTF (batch): 0.002914
 
 ## Error Totals (No Punctuation)
 - Substitutions: 10432
@@ -23,26 +23,26 @@
 
 | File | CER | CER (No Punc) | Runtime (s) | ASR Runtime (s) | RTF | ASR RTF | Analysis Report |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| `ldg001.opus` | 0.190179 | 0.139365 | 9.153 | 4.914 | 0.006530 | 0.003506 | `ldg001.qwen3_asr_0_6b.analysis.md` |
-| `ldg002.opus` | 0.197320 | 0.143844 | 8.308 | 4.223 | 0.005907 | 0.003002 | `ldg002.qwen3_asr_0_6b.analysis.md` |
-| `ldg003.opus` | 0.192543 | 0.148219 | 8.477 | 4.345 | 0.006019 | 0.003085 | `ldg003.qwen3_asr_0_6b.analysis.md` |
-| `ldg004.opus` | 0.167557 | 0.124704 | 8.143 | 4.043 | 0.005799 | 0.002880 | `ldg004.qwen3_asr_0_6b.analysis.md` |
-| `ldg005.opus` | 0.191887 | 0.146160 | 8.844 | 4.673 | 0.006241 | 0.003297 | `ldg005.qwen3_asr_0_6b.analysis.md` |
-| `mzd001.opus` | 0.107968 | 0.063243 | 7.263 | 3.272 | 0.005876 | 0.002647 | `mzd001.qwen3_asr_0_6b.analysis.md` |
-| `mzd002.opus` | 0.137631 | 0.097638 | 6.737 | 2.916 | 0.005568 | 0.002409 | `mzd002.qwen3_asr_0_6b.analysis.md` |
-| `mzd003.opus` | 0.128107 | 0.088251 | 6.970 | 3.116 | 0.005813 | 0.002599 | `mzd003.qwen3_asr_0_6b.analysis.md` |
-| `mzd004.opus` | 0.137972 | 0.097056 | 7.516 | 3.576 | 0.006176 | 0.002939 | `mzd004.qwen3_asr_0_6b.analysis.md` |
-| `mzd005.opus` | 0.110121 | 0.076334 | 7.346 | 3.367 | 0.005938 | 0.002722 | `mzd005.qwen3_asr_0_6b.analysis.md` |
-| `sgjj001.opus` | 0.169542 | 0.124066 | 11.166 | 4.892 | 0.006036 | 0.002644 | `sgjj001.qwen3_asr_0_6b.analysis.md` |
-| `sgjj002.opus` | 0.186006 | 0.138610 | 10.731 | 4.710 | 0.006080 | 0.002668 | `sgjj002.qwen3_asr_0_6b.analysis.md` |
-| `sgjj003.opus` | 0.174358 | 0.129544 | 11.332 | 5.227 | 0.006457 | 0.002978 | `sgjj003.qwen3_asr_0_6b.analysis.md` |
-| `sgjj004.opus` | 0.176878 | 0.128118 | 11.112 | 4.851 | 0.006243 | 0.002725 | `sgjj004.qwen3_asr_0_6b.analysis.md` |
-| `sgjj005.opus` | 0.157197 | 0.107332 | 10.934 | 4.965 | 0.006143 | 0.002789 | `sgjj005.qwen3_asr_0_6b.analysis.md` |
-| `swz001.opus` | 0.173307 | 0.122350 | 9.785 | 4.283 | 0.005782 | 0.002531 | `swz001.qwen3_asr_0_6b.analysis.md` |
-| `swz002.opus` | 0.188573 | 0.136792 | 11.272 | 5.295 | 0.006367 | 0.002991 | `swz002.qwen3_asr_0_6b.analysis.md` |
-| `swz003.opus` | 0.177892 | 0.131426 | 10.633 | 4.928 | 0.006084 | 0.002820 | `swz003.qwen3_asr_0_6b.analysis.md` |
-| `swz004.opus` | 0.201621 | 0.151728 | 11.911 | 5.799 | 0.006612 | 0.003219 | `swz004.qwen3_asr_0_6b.analysis.md` |
-| `swz005.opus` | 0.196913 | 0.146428 | 11.014 | 5.165 | 0.006282 | 0.002946 | `swz005.qwen3_asr_0_6b.analysis.md` |
+| `ldg001.opus` | 0.190179 | 0.139365 | 9.012 | 4.721 | 0.006429 | 0.003368 | `ldg001.qwen3_asr_0_6b.analysis.md` |
+| `ldg002.opus` | 0.197320 | 0.143844 | 8.336 | 4.246 | 0.005927 | 0.003019 | `ldg002.qwen3_asr_0_6b.analysis.md` |
+| `ldg003.opus` | 0.192543 | 0.148219 | 8.547 | 4.348 | 0.006069 | 0.003087 | `ldg003.qwen3_asr_0_6b.analysis.md` |
+| `ldg004.opus` | 0.167557 | 0.124704 | 8.310 | 4.075 | 0.005919 | 0.002902 | `ldg004.qwen3_asr_0_6b.analysis.md` |
+| `ldg005.opus` | 0.191887 | 0.146160 | 8.955 | 4.740 | 0.006319 | 0.003344 | `ldg005.qwen3_asr_0_6b.analysis.md` |
+| `mzd001.opus` | 0.107968 | 0.063243 | 7.354 | 3.343 | 0.005949 | 0.002705 | `mzd001.qwen3_asr_0_6b.analysis.md` |
+| `mzd002.opus` | 0.137631 | 0.097638 | 6.848 | 2.983 | 0.005659 | 0.002465 | `mzd002.qwen3_asr_0_6b.analysis.md` |
+| `mzd003.opus` | 0.128107 | 0.088251 | 7.194 | 3.211 | 0.006000 | 0.002678 | `mzd003.qwen3_asr_0_6b.analysis.md` |
+| `mzd004.opus` | 0.137972 | 0.097056 | 7.625 | 3.649 | 0.006265 | 0.002998 | `mzd004.qwen3_asr_0_6b.analysis.md` |
+| `mzd005.opus` | 0.110121 | 0.076334 | 7.495 | 3.443 | 0.006059 | 0.002783 | `mzd005.qwen3_asr_0_6b.analysis.md` |
+| `sgjj001.opus` | 0.169542 | 0.124066 | 11.218 | 4.981 | 0.006064 | 0.002692 | `sgjj001.qwen3_asr_0_6b.analysis.md` |
+| `sgjj002.opus` | 0.186006 | 0.138610 | 11.017 | 4.878 | 0.006242 | 0.002764 | `sgjj002.qwen3_asr_0_6b.analysis.md` |
+| `sgjj003.opus` | 0.174358 | 0.129544 | 11.522 | 5.306 | 0.006565 | 0.003023 | `sgjj003.qwen3_asr_0_6b.analysis.md` |
+| `sgjj004.opus` | 0.176878 | 0.128118 | 11.259 | 4.936 | 0.006325 | 0.002773 | `sgjj004.qwen3_asr_0_6b.analysis.md` |
+| `sgjj005.opus` | 0.157197 | 0.107332 | 10.966 | 5.038 | 0.006161 | 0.002830 | `sgjj005.qwen3_asr_0_6b.analysis.md` |
+| `swz001.opus` | 0.173307 | 0.122350 | 9.959 | 4.385 | 0.005885 | 0.002591 | `swz001.qwen3_asr_0_6b.analysis.md` |
+| `swz002.opus` | 0.188573 | 0.136792 | 11.147 | 5.342 | 0.006297 | 0.003017 | `swz002.qwen3_asr_0_6b.analysis.md` |
+| `swz003.opus` | 0.177892 | 0.131426 | 10.988 | 5.049 | 0.006287 | 0.002889 | `swz003.qwen3_asr_0_6b.analysis.md` |
+| `swz004.opus` | 0.201621 | 0.151728 | 12.044 | 5.959 | 0.006686 | 0.003308 | `swz004.qwen3_asr_0_6b.analysis.md` |
+| `swz005.opus` | 0.196913 | 0.146428 | 11.230 | 5.216 | 0.006405 | 0.002975 | `swz005.qwen3_asr_0_6b.analysis.md` |
 
 ## Top Substitution Patterns (All Files)
 

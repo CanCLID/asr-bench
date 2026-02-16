@@ -23,11 +23,11 @@ Example:
 
 ## 點開始評測
 
-確保
+確保已經安裝 
 
-- `uv` installed
-- `ffmpeg` available in PATH
-- NVIDIA driver installed if using GPU
+- [uv](https://docs.astral.sh/uv/getting-started/installation/)
+- [ffmpeg](https://ffmpeg.org/download.html)
+- [NVIDIA driver](https://www.nvidia.com/en-us/drivers/)
 
 然後跑：
 
@@ -56,9 +56,10 @@ Notes:
 
 - First run downloads models from Hugging Face / ModelScope and may clone model source repos to `.cache/`.
 - Device defaults to `auto` (uses `cuda:0` if available, otherwise `cpu`).
-- `Qwen3-ASR` scripts currently run with `transformers==4.57.6`.
+- `Qwen3-ASR` scripts should use `transformers==4.57.6` (same as upstream `qwen-asr` pin).
+- Using newer `transformers` versions for Qwen may cause decode failure / repetitive hallucination outputs.
 - `GLM-ASR-Nano-2512` currently needs `transformers` from GitHub source.
-- If you need to rerun both Qwen and GLM benchmarks, use separate virtual environments.
+- Qwen and GLM have conflicting `transformers` requirements; run them in separate virtual environments.
 
 輸出結果都喺
 
@@ -72,10 +73,10 @@ Notes:
 
 ## 指標
 
-- `CER (with punctuation)`
-- `CER (without punctuation)`
-- `Micro CER`: aggregate CER over all files (`sum(edit_distance) / sum(reference_chars)`)
-- `Macro CER`: average of per-file CER (each file has equal weight)
+- `CER（含標點符號）`
+- `CER（唔含標點符號）`
+- `Micro CER`: 所有音頻加埋嘅 CER (`sum(edit_distance) / sum(reference_chars)`)
+- `Macro CER`: 單個音頻文件 CER 嘅平均數（唔同長度嘅音頻都相同權重）
 - `Total runtime (s)` (batch wall-clock for evaluated files)
 - `End-to-end RTF` (`runtime / audio_duration`, lower is faster)
 
@@ -91,11 +92,11 @@ Benchmark setup note:
 
 | Model                         |  Micro CER | Micro CER (No Punc) |  Macro CER | Macro CER (No Punc) | Total Runtime (s) | End-to-end RTF | Summary                                         |
 | ----------------------------- | ---------: | ------------------: | ---------: | ------------------: | ----------------: | -------------: | ----------------------------------------------- |
-| `FunAudioLLM/SenseVoiceSmall` | `0.195603` |          `0.132843` | `0.191163` |          `0.129152` |         `157.419` |     `0.005106` | `summary/sensevoicesmall.md`                    |
-| `FireRedTeam/FireRedASR2-AED` | `0.211372` |          `0.112464` | `0.207522` |          `0.108761` |         `761.631` |     `0.024703` | `summary/fireredasr2_aed.md`                    |
-| `Qwen/Qwen3-ASR-0.6B`         | `0.171614` |          `0.124986` | `0.168179` |          `0.122061` |         `188.647` |     `0.006119` | `summary/qwen3_asr_0_6b.md`                     |
-| `Qwen/Qwen3-ASR-1.7B`         | `0.147201` |          `0.099777` | `0.144252` |          `0.097319` |         `207.937` |     `0.006744` | `summary/qwen3_asr_1_7b.md`                     |
-| `zai-org/GLM-ASR-Nano-2512`   | `0.273824` |          `0.234102` | `0.270719` |          `0.231555` |         `306.961` |     `0.009956` | `summary/glm_asr_nano_2512.md`                  |
+| `FunAudioLLM/SenseVoiceSmall` | `0.195603` |          `0.132843` | `0.191163` |          `0.129152` |         `156.283` |     `0.005069` | `summary/sensevoicesmall.md`                    |
+| `FireRedTeam/FireRedASR2-AED` | `0.211381` |          `0.112433` | `0.207529` |          `0.108727` |         `760.629` |     `0.024670` | `summary/fireredasr2_aed.md`                    |
+| `Qwen/Qwen3-ASR-0.6B`         | `0.171614` |          `0.124986` | `0.168179` |          `0.122061` |         `191.023` |     `0.006196` | `summary/qwen3_asr_0_6b.md`                     |
+| `Qwen/Qwen3-ASR-1.7B`         | `0.146337` |          `0.099373` | `0.143441` |          `0.096971` |         `207.735` |     `0.006738` | `summary/qwen3_asr_1_7b.md`                     |
+| `zai-org/GLM-ASR-Nano-2512`   | `0.273824` |          `0.234102` | `0.270719` |          `0.231555` |         `305.891` |     `0.009921` | `summary/glm_asr_nano_2512.md`                  |
 
 ![Benchmark comparison bar chart](assets/benchmark_comparison_20files.png)
 

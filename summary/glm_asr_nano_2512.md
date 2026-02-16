@@ -7,12 +7,12 @@
 - Macro CER (with punctuation): 0.270719
 - Macro CER (without punctuation): 0.231555
 - Total audio duration (s): 30831.959
-- Total runtime (s): 306.961
-- Total ASR runtime only (s): 205.468
-- Average runtime per file (s): 15.348
+- Total runtime (s): 305.891
+- Total ASR runtime only (s): 205.064
+- Average runtime per file (s): 15.295
 - Average audio duration per file (s): 1541.598
-- End-to-end RTF (batch): 0.009956
-- ASR-only RTF (batch): 0.006664
+- End-to-end RTF (batch): 0.009921
+- ASR-only RTF (batch): 0.006651
 
 ## Error Totals (No Punctuation)
 - Substitutions: 19695
@@ -23,26 +23,26 @@
 
 | File | CER | CER (No Punc) | Runtime (s) | ASR Runtime (s) | RTF | ASR RTF | Analysis Report |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| `ldg001.opus` | 0.300458 | 0.257814 | 14.269 | 9.986 | 0.010180 | 0.007124 | `ldg001.glm_asr_nano_2512.analysis.md` |
-| `ldg002.opus` | 0.296757 | 0.261987 | 12.780 | 8.686 | 0.009086 | 0.006176 | `ldg002.glm_asr_nano_2512.analysis.md` |
-| `ldg003.opus` | 0.308031 | 0.277245 | 12.929 | 8.778 | 0.009180 | 0.006233 | `ldg003.glm_asr_nano_2512.analysis.md` |
-| `ldg004.opus` | 0.273092 | 0.241439 | 12.728 | 8.627 | 0.009065 | 0.006144 | `ldg004.glm_asr_nano_2512.analysis.md` |
-| `ldg005.opus` | 0.302280 | 0.265380 | 13.224 | 9.000 | 0.009331 | 0.006351 | `ldg005.glm_asr_nano_2512.analysis.md` |
-| `mzd001.opus` | 0.195951 | 0.157528 | 11.700 | 7.681 | 0.009466 | 0.006214 | `mzd001.glm_asr_nano_2512.analysis.md` |
-| `mzd002.opus` | 0.277565 | 0.246256 | 15.273 | 11.435 | 0.012622 | 0.009450 | `mzd002.glm_asr_nano_2512.analysis.md` |
-| `mzd003.opus` | 0.217734 | 0.184281 | 10.812 | 6.938 | 0.009017 | 0.005786 | `mzd003.glm_asr_nano_2512.analysis.md` |
-| `mzd004.opus` | 0.236286 | 0.205251 | 11.727 | 7.715 | 0.009636 | 0.006340 | `mzd004.glm_asr_nano_2512.analysis.md` |
-| `mzd005.opus` | 0.207448 | 0.166965 | 11.451 | 7.386 | 0.009257 | 0.005970 | `mzd005.glm_asr_nano_2512.analysis.md` |
-| `sgjj001.opus` | 0.248588 | 0.210039 | 16.664 | 10.326 | 0.009007 | 0.005582 | `sgjj001.glm_asr_nano_2512.analysis.md` |
-| `sgjj002.opus` | 0.271698 | 0.235180 | 16.165 | 10.105 | 0.009159 | 0.005725 | `sgjj002.glm_asr_nano_2512.analysis.md` |
-| `sgjj003.opus` | 0.307117 | 0.272560 | 22.379 | 16.193 | 0.012752 | 0.009227 | `sgjj003.glm_asr_nano_2512.analysis.md` |
-| `sgjj004.opus` | 0.267601 | 0.225944 | 16.554 | 10.188 | 0.009300 | 0.005724 | `sgjj004.glm_asr_nano_2512.analysis.md` |
-| `sgjj005.opus` | 0.292364 | 0.228836 | 22.157 | 16.151 | 0.012448 | 0.009073 | `sgjj005.glm_asr_nano_2512.analysis.md` |
-| `swz001.opus` | 0.250670 | 0.206541 | 14.874 | 9.149 | 0.008789 | 0.005406 | `swz001.glm_asr_nano_2512.analysis.md` |
-| `swz002.opus` | 0.272348 | 0.230951 | 16.490 | 10.427 | 0.009315 | 0.005890 | `swz002.glm_asr_nano_2512.analysis.md` |
-| `swz003.opus` | 0.281727 | 0.240417 | 16.079 | 10.134 | 0.009201 | 0.005799 | `swz003.glm_asr_nano_2512.analysis.md` |
-| `swz004.opus` | 0.309978 | 0.264219 | 22.548 | 16.373 | 0.012517 | 0.009089 | `swz004.glm_asr_nano_2512.analysis.md` |
-| `swz005.opus` | 0.296695 | 0.252260 | 16.160 | 10.191 | 0.009217 | 0.005813 | `swz005.glm_asr_nano_2512.analysis.md` |
+| `ldg001.opus` | 0.300458 | 0.257814 | 14.247 | 9.981 | 0.010164 | 0.007121 | `ldg001.glm_asr_nano_2512.analysis.md` |
+| `ldg002.opus` | 0.296757 | 0.261987 | 12.823 | 8.691 | 0.009117 | 0.006179 | `ldg002.glm_asr_nano_2512.analysis.md` |
+| `ldg003.opus` | 0.308031 | 0.277245 | 12.955 | 8.783 | 0.009199 | 0.006236 | `ldg003.glm_asr_nano_2512.analysis.md` |
+| `ldg004.opus` | 0.273092 | 0.241439 | 12.797 | 8.650 | 0.009114 | 0.006161 | `ldg004.glm_asr_nano_2512.analysis.md` |
+| `ldg005.opus` | 0.302280 | 0.265380 | 13.239 | 9.025 | 0.009342 | 0.006368 | `ldg005.glm_asr_nano_2512.analysis.md` |
+| `mzd001.opus` | 0.195951 | 0.157528 | 11.739 | 7.708 | 0.009497 | 0.006236 | `mzd001.glm_asr_nano_2512.analysis.md` |
+| `mzd002.opus` | 0.277565 | 0.246256 | 15.328 | 11.449 | 0.012667 | 0.009462 | `mzd002.glm_asr_nano_2512.analysis.md` |
+| `mzd003.opus` | 0.217734 | 0.184281 | 10.868 | 6.963 | 0.009064 | 0.005807 | `mzd003.glm_asr_nano_2512.analysis.md` |
+| `mzd004.opus` | 0.236286 | 0.205251 | 11.699 | 7.695 | 0.009613 | 0.006323 | `mzd004.glm_asr_nano_2512.analysis.md` |
+| `mzd005.opus` | 0.207448 | 0.166965 | 11.391 | 7.367 | 0.009208 | 0.005955 | `mzd005.glm_asr_nano_2512.analysis.md` |
+| `sgjj001.opus` | 0.248588 | 0.210039 | 16.571 | 10.261 | 0.008957 | 0.005546 | `sgjj001.glm_asr_nano_2512.analysis.md` |
+| `sgjj002.opus` | 0.271698 | 0.235180 | 16.135 | 10.051 | 0.009141 | 0.005694 | `sgjj002.glm_asr_nano_2512.analysis.md` |
+| `sgjj003.opus` | 0.307117 | 0.272560 | 22.401 | 16.207 | 0.012764 | 0.009234 | `sgjj003.glm_asr_nano_2512.analysis.md` |
+| `sgjj004.opus` | 0.267601 | 0.225944 | 16.491 | 10.191 | 0.009264 | 0.005725 | `sgjj004.glm_asr_nano_2512.analysis.md` |
+| `sgjj005.opus` | 0.292364 | 0.228836 | 22.224 | 16.140 | 0.012485 | 0.009067 | `sgjj005.glm_asr_nano_2512.analysis.md` |
+| `swz001.opus` | 0.250670 | 0.206541 | 14.523 | 8.979 | 0.008582 | 0.005306 | `swz001.glm_asr_nano_2512.analysis.md` |
+| `swz002.opus` | 0.272348 | 0.230951 | 16.253 | 10.359 | 0.009181 | 0.005851 | `swz002.glm_asr_nano_2512.analysis.md` |
+| `swz003.opus` | 0.281727 | 0.240417 | 15.760 | 10.017 | 0.009018 | 0.005732 | `swz003.glm_asr_nano_2512.analysis.md` |
+| `swz004.opus` | 0.309978 | 0.264219 | 22.411 | 16.386 | 0.012441 | 0.009096 | `swz004.glm_asr_nano_2512.analysis.md` |
+| `swz005.opus` | 0.296695 | 0.252260 | 16.036 | 10.164 | 0.009146 | 0.005797 | `swz005.glm_asr_nano_2512.analysis.md` |
 
 ## Top Substitution Patterns (All Files)
 

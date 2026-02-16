@@ -8,7 +8,10 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 
-DATASET_SIZE_RE = re.compile(r"Latest run .*?,\s*(\d+)\s+files\):")
+DATASET_SIZE_RE = re.compile(
+    r"(?:Latest run .*?,\s*(\d+)\s+files\):|^\s*(\d+)\s*集數據\s*$)",
+    re.MULTILINE,
+)
 TABLE_ROW_RE = re.compile(
     r"^\|\s*`(?P<model>[^`]+)`\s*\|\s*`(?P<micro_cer>[0-9.]+)`\s*\|\s*`(?P<micro_cer_no_punc>[0-9.]+)`\s*\|\s*`(?P<macro_cer>[0-9.]+)`\s*\|\s*`(?P<macro_cer_no_punc>[0-9.]+)`\s*\|\s*`(?P<runtime_s>[0-9.]+)`\s*\|\s*`(?P<rtf>[0-9.]+)`\s*\|",
     re.MULTILINE,
@@ -18,14 +21,22 @@ TABLE_ROW_RE = re.compile(
 def parse_readme_metrics(readme_path: Path) -> tuple[int, list[dict[str, float | str]]]:
     text = readme_path.read_text(encoding="utf-8")
 
-    start = text.find("## Benchmark results")
-    end = text.find("## Current optimizations")
+    start = text.find("## 評測結果")
+    if start == -1:
+        start = text.find("## Benchmark results")
+
+    end_candidates = [
+        text.find("## Qwen3-ASR-1.7B VAD 對比測試"),
+        text.find("## Current optimizations"),
+    ]
+    end_candidates = [value for value in end_candidates if value != -1]
+    end = min(end_candidates) if end_candidates else -1
     section = text[start:end] if start != -1 and end != -1 else text
 
     dataset_match = DATASET_SIZE_RE.search(section)
     if dataset_match is None:
         raise ValueError(f"Could not parse dataset size from {readme_path}")
-    dataset_size = int(dataset_match.group(1))
+    dataset_size = int(dataset_match.group(1) or dataset_match.group(2))
 
     rows: list[dict[str, float | str]] = []
     for match in TABLE_ROW_RE.finditer(section):

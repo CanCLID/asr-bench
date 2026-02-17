@@ -210,8 +210,14 @@ class GlmAsrWrapper:
         dtype: torch.dtype,
         max_new_tokens: int,
     ) -> None:
-        self.processor = AutoProcessor.from_pretrained(model_id_or_path)
-        self.model = HfAutoModel.from_pretrained(model_id_or_path, dtype=dtype)
+        self.processor = AutoProcessor.from_pretrained(
+            model_id_or_path, trust_remote_code=True
+        )
+        self.model = HfAutoModel.from_pretrained(
+            model_id_or_path,
+            dtype=dtype,
+            trust_remote_code=True,
+        )
         self.model = self.model.to(device)
         self.model.eval()
         self.device = next(self.model.parameters()).device

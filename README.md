@@ -83,20 +83,24 @@ Notes:
 Benchmark setup note:
 
 - All benchmark scripts default to `fsmn-vad` (FunASR/ModelScope).
-- All benchmark scripts use the same default max VAD segment length: `10s` (`--vad-max-segment-ms=10000`).
+- All benchmark scripts use the same default max VAD segment length: `20s` (`--vad-max-segment-ms=20000`).
 - `scripts/fireredasr2_aed_srt_cer.py` and `scripts/qwen3_asr_1_7b_srt_cer.py` support VAD ablation via `--vad-backend {fsmn,firered}`.
 
 ## 評測結果
 
 20 集數據
 
+- 分段設定：`20s`（`--vad-max-segment-ms=20000`）
+
 | Model                         |  Micro CER | Micro CER (No Punc) |  Macro CER | Macro CER (No Punc) | Total Runtime (s) | End-to-end RTF | Summary                                         |
 | ----------------------------- | ---------: | ------------------: | ---------: | ------------------: | ----------------: | -------------: | ----------------------------------------------- |
-| `FunAudioLLM/SenseVoiceSmall` | `0.195603` |          `0.132843` | `0.191163` |          `0.129152` |         `156.283` |     `0.005069` | `summary/sensevoicesmall.md`                    |
-| `FireRedTeam/FireRedASR2-AED` | `0.211381` |          `0.112433` | `0.207529` |          `0.108727` |         `760.629` |     `0.024670` | `summary/fireredasr2_aed.md`                    |
-| `Qwen/Qwen3-ASR-0.6B`         | `0.171614` |          `0.124986` | `0.168179` |          `0.122061` |         `191.023` |     `0.006196` | `summary/qwen3_asr_0_6b.md`                     |
-| `Qwen/Qwen3-ASR-1.7B`         | `0.146337` |          `0.099373` | `0.143441` |          `0.096971` |         `207.735` |     `0.006738` | `summary/qwen3_asr_1_7b.md`                     |
-| `zai-org/GLM-ASR-Nano-2512`   | `0.273824` |          `0.234102` | `0.270719` |          `0.231555` |         `305.891` |     `0.009921` | `summary/glm_asr_nano_2512.md`                  |
+| `FunAudioLLM/SenseVoiceSmall` | `0.191024` |          `0.130386` | `0.186819` |          `0.126799` |         `166.841` |     `0.005411` | `summary/sensevoicesmall_20s.md`                |
+| `FireRedTeam/FireRedASR2-AED` | `0.210085` |          `0.110692` | `0.206295` |          `0.107077` |        `1429.858` |     `0.046376` | `summary/fireredasr2_aed_20s.md`                |
+| `Qwen/Qwen3-ASR-0.6B`         | `0.165949` |          `0.121845` | `0.162902` |          `0.119159` |         `248.593` |     `0.008063` | `summary/qwen3_asr_0_6b_20s.md`                 |
+| `Qwen/Qwen3-ASR-1.7B`         | `0.141252` |          `0.097321` | `0.138676` |          `0.095073` |         `272.895` |     `0.008851` | `summary/qwen3_asr_1_7b_20s.md`                 |
+| `zai-org/GLM-ASR-Nano-2512`   | `0.264344` |          `0.227147` | `0.261308` |          `0.224456` |         `356.151` |     `0.011551` | `summary/glm_asr_nano_2512_20s.md`              |
+
+- FireRed `20s` benchmark was run with `--segment-batch-size 64` to avoid CUDA OOM at batch size 128.
 
 ![Benchmark comparison bar chart](assets/benchmark_comparison_20files.png)
 
@@ -116,7 +120,7 @@ Benchmark setup note:
 ## Current optimizations
 
 - Auto device selection (`cuda:0` first, then CPU fallback)
-- VAD segmentation enabled with default max segment length `10s`
+- VAD segmentation enabled with default max segment length `20s`
 - Batched segment inference for ASR (`--segment-batch-size`, auto-tuned by device)
 - Cantonese post-processing with OpenCC `s2hk` and custom regex corrections
 - Detailed markdown analysis with top substitutions/deletions/insertions, mismatch examples, and aggregated error patterns across files
